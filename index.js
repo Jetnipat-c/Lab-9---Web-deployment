@@ -4,4 +4,10 @@ var app = express();
 
 app.get('/', (req, res) => res.send('Hello world') );
 
-app.listen(80,()=>console.log('Server Running'));
+app.get('/crash',(req,res)=>{
+    console.log('Crash!!')
+    res.send('Crash')
+    process.exit(1)
+})
+
+app.listen(80,()=>console.log('Server Running',80));
