@@ -2,10 +2,6 @@ var express = require('express');
 
 var app = express();
 
-app.get('/', (req, res) => 
-    {
-        console.log('Hello world')
-        res.send('Hello world') 
-    });
+app.get('/', (req, res) => res.send('Hello world') );
 
-app.listen(80);
+app.listen(80,()=>console.log('Server Running'));
